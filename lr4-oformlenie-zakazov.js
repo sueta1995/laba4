@@ -1,23 +1,31 @@
 ID = 1;
 
 function add() {
-    $("#nettovarov").remove();
+    if ($("#nazvaie").val() != '' && $("#cena").val() != '') {
+        $("#nettovarov").remove();
 
-    createHeader("tablica-tovarov", "shapka")
+        createHeader("tablica-tovarov", "shapka")
 
-    $("#tablica-tovarov").append(
-        '<br>' + 
-        '<div class="row" onclick="addInOrder(this)" id="tovar' + ID + '" tovari>' +
-            '<div class="col-8">' +
-                "<span class='tekst-tovari'>" + $("#nazvanie").val() + "</span>" +
-            "</div>" +
-            '<div class="col-4">' +
-                "<span class='tekst-tovari'>" + $("#cena").val() + " ₽</span>" +
-            "</div>" +
-        "</div>"
-    );
+        $("#tablica-tovarov").append(
+            '<br>' + 
+            '<div class="row" onclick="addInOrder(this)" id="tovar' + ID + '" tovari>' +
+                '<div class="col-8">' +
+                    "<span class='tekst-tovari'>" + $("#nazvanie").val() + "</span>" +
+                "</div>" +
+                '<div class="col-4">' +
+                    "<span class='tekst-tovari'>" + $("#cena").val() + " ₽</span>" +
+                "</div>" +
+            "</div>"
+        );
 
-    ID += 1;
+        ID += 1;
+
+        $("#nazvanie").val('');
+        $("#cena").val('');
+    }
+    else {
+        alert("Введите корректные данные!")
+    }
 }
 
 function addInOrder(obj) {
