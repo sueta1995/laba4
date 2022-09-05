@@ -15,7 +15,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark my-primary">
             <a class="navbar-brand" href="#">Магазин</a>
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="https://sueta.fun/yip/">Hачало
                         <span class="sr-only">(current)</span>
                     </a>
@@ -24,34 +24,53 @@
                     <a class="nav-link" href="https://sueta.fun/">Ссылки</a>
                 </li>
             </ul>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    Общая стоимость: <span id="stoimost">0</span> ₽
+                </li>
+            </ul>
         </nav>
     </header>
     <main class="container">
         <div class="row">
-            <div class="col-6">
-                <h2>Таблица заказов</h2>
+            <div class="col-10" id="tablica-tovarov">
+                <h2>Таблица товаров</h2>
             </div>
         </div>
         <br>
         <div class="row">
-            <div class="col-8" vniz>
-                <span id="netzakazov">Еще нет заказов, наберите название и стоимость в поисковую строку.</span>
+            <div class="col-12">
+                <span id="nettovarov">Еще нет товаров, наберите название и стоимость в поисковую строку.</span>
             </div>
         </div>
+        <br><br>
         <div class="row">
-            <div class="col-2">
-                <span class="obtek">Название:</span>
+            <div class="col-4">
+                <span>Название:</span>
+                <input class="form-control" id="nazvanie">
             </div>
-            <div class="col-3">
-                <input class="obtek-input" id="nazvanie">
+            <div class="col-4">
+                <span>Цена:</span>
+                <input class="form-control" id="cena">
             </div>
-            <div class="col-2">
-                <span class="obtek">Цена:</span>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-dark" onclick="add()">Добавить</button>
             </div>
-            <div class="col-3">
-                <input class="obtek-input" id="cena">
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-10" id="tablica-zakaz">
+                <h2>Таблица формирования заказов</h2>
             </div>
-                <button onclick="add()">Добавить</button>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <span id="netzakazov">Добавленных в заказ товаров нет.</span>
+            </div>
         </div>
     </main>
     <footer class="my-primary">

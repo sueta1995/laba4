@@ -23,16 +23,10 @@ footer {
     background-color:black;
 }
 
-#netzakazov {
+#netzakazov, #nettovarov, .tekst-tovari {
     font-style: italic;
 }
 
-.obtek {
-    margin-right: 2%;
-}
-
-.obtek-input {
-    margin-right: 4%;
-    margin-bottom: 5%;
-    margin-top: 4%;
+div[tovari]:hover {
+    background-color:aliceblue
 }
