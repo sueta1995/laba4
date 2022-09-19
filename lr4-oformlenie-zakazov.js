@@ -1,11 +1,11 @@
 ID = 1;
 
 function add() {
-    if ($("#nazvaie").val() != '' && $("#cena").val() != '') {
+    if ($("#nazvaie").val() != '' && $("#cena").val() != '' && !isNaN($("#cena").val()) && parseInt($("#cena").val()) > 0) {
         $("#nettovarov").remove();
 
         createHeader("tablica-tovarov", "shapka")
-
+ 
         $("#tablica-tovarov").append(
             '<br>' + 
             '<div class="row" onclick="addInOrder(this)" id="tovar' + ID + '" tovari>' +
